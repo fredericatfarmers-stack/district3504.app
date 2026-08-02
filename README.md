@@ -49,3 +49,4 @@ the site works fine.
 ## No personal contact info
 Per design, this site never publishes email addresses or personal calendar
 links — every call-to-action routes to a Workable job or application link.
+website deployment connected to Vercel
