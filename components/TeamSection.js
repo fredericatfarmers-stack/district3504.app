@@ -36,9 +36,6 @@ export default function TeamSection() {
                   width={400}
                   height={400}
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                  onError={(e) => {
-                    e.target.style.display = "none";
-                  }}
                 />
                 <span className="team-photo-fallback">
                   {initials(member.name)}
