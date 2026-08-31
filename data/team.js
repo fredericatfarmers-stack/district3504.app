@@ -17,22 +17,16 @@ export const team = [
   {
     name: "Laurie Vasquez, CIC",
     role: "Agency Business Consultant",
-    bio: "28 years with Farmers — the heart of the team, with an authentic passion for the industry and every agent she supports.",
+    bio: "We will celebrate her 30 years with Farmers this December 2026 — the heart of the team, with an authentic passion for the industry and every agent she supports.",
     photo: "/images/team/laurie-vasquez-2026.jpg",
   },
   {
     name: "Lorena Hernandez",
     role: "Agency Business Consultant",
-    bio: "21 years of insurance experience, focused on Protégés and onboarding new agents. She's seen a thing or two.",
+    bio: "With more than 22 years of insurance experience, Lorena is focused on Protégés and onboarding new agents. She's seen a thing or two.",
     photo: "/images/team/lorena-hernandez-2026.jpg",
   },
-  {
-    name: "Erika Wilson",
-    role: "District Onboarding & Recruiting Specialist",
-    bio: "Focused on making the onboarding experience smoother for every new producer and agency owner who joins District 04.",
-    photo: "/images/team/erika-wilson-2026.jpg",
-  },
-  {
+   {
     name: "Frederic St Laurent",
     role: "Agency Development Manager",
     bio: "40+ years in financial services recruiting. Published in RIA Biz Magazine and Forbes. Focused on finding the right people for the right path.",
