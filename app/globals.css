@@ -204,6 +204,11 @@
   .team-card {
     text-align: left;
   }
+  .team-grid-bottom {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 760px;
+    margin: 48px auto 0;
+  }
   .team-photo {
     width: 100%; aspect-ratio: 1; border-radius: 20px;
     background: linear-gradient(135deg, var(--blue-bright), var(--pink));
@@ -300,7 +305,8 @@
 
   @media (max-width: 900px) {
     .nav-links { display: none; }
-    .pillars, .team-grid { grid-template-columns: 1fr; }
+    .pillars, .team-grid, .team-grid-bottom { grid-template-columns: 1fr; }
+    .team-grid-bottom { max-width: none; margin-top: 32px; }
     .strip .container { justify-content: flex-start; gap: 32px 48px; }
     .path-card { grid-template-columns: 44px 1fr; }
     .path-cta { grid-column: 2; margin-top: 12px; justify-self: start; }
