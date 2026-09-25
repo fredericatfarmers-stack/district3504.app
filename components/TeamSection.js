@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { team } from "../data/team";
+import { team, financialServicesTeam } from "../data/team";
 import Reveal from "./Reveal";
 
 function initials(name) {
@@ -9,6 +9,26 @@ function initials(name) {
     .map((w) => w[0])
     .join("")
     .slice(0, 2);
+}
+
+function TeamCard({ member }) {
+  return (
+    <Reveal className="team-card">
+      <div className="team-photo">
+        <Image
+          src={member.photo}
+          alt={member.name}
+          width={400}
+          height={400}
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        />
+        <span className="team-photo-fallback">{initials(member.name)}</span>
+      </div>
+      <div className="team-name">{member.name}</div>
+      <div className="team-role">{member.role}</div>
+      {member.bio ? <div className="team-bio">{member.bio}</div> : null}
+    </Reveal>
+  );
 }
 
 export default function TeamSection() {
@@ -24,27 +44,16 @@ export default function TeamSection() {
             the work.
           </p>
         </Reveal>
+
         <div className="team-grid">
           {team.map((member) => (
-            <Reveal className="team-card" key={member.name}>
-              <div className="team-photo">
-                {/* Drop the real headshot at the path above in /public — it will
-                    replace these initials automatically once the file exists. */}
-                <Image
-                  src={member.photo}
-                  alt={member.name}
-                  width={400}
-                  height={400}
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
-                <span className="team-photo-fallback">
-                  {initials(member.name)}
-                </span>
-              </div>
-              <div className="team-name">{member.name}</div>
-              <div className="team-role">{member.role}</div>
-              <div className="team-bio">{member.bio}</div>
-            </Reveal>
+            <TeamCard member={member} key={member.name} />
+          ))}
+        </div>
+
+        <div className="team-grid team-grid-bottom">
+          {financialServicesTeam.map((member) => (
+            <TeamCard member={member} key={member.name} />
           ))}
         </div>
       </div>
