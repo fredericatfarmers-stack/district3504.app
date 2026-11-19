@@ -1,23 +1,21 @@
 import { careerPageUrl } from "../data/paths";
 
-const agencyMapUrl =
-  "https://www.google.com/maps/d/u/0/edit?mid=1uiq5HA9NqchfpWCsu2AdMpXI9XHztEw&usp=sharing";
-
 export default function Nav() {
   return (
     <nav>
       <div className="container">
-        <div className="nav-brand">
+        <a href="/" className="nav-brand" aria-label="District 3504 home">
           DISTRICT <span>3504</span>
-        </div>
+        </a>
         <div className="nav-links">
           <a href="/#paths">Paths</a>
           <a href="/#team">Team</a>
           <a href="/#clarity">About Us</a>
-          <a href={agencyMapUrl} target="_blank" rel="noopener noreferrer">
-            Agencies
-          </a>
+          <a href="/agencies">Agencies</a>
         </div>
+        <a href="/agencies" className="mobile-agencies">
+          Agencies
+        </a>
         <a
           href={careerPageUrl}
           target="_blank"
