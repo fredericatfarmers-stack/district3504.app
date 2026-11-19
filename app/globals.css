@@ -46,7 +46,8 @@
   .nav-brand span { color: var(--magenta); }
   .nav-links { display: flex; gap: 36px; align-items: center; }
   .nav-links a { font-size: 0.9rem; font-weight: 600; color: var(--blue-dark); }
-  .mobile-agencies { display: none; }
+  .mobile-nav-actions { display: none; }
+  .mobile-agencies, .mobile-careers { display: none; }
   .nav-cta {
     background: var(--blue-dark); color: white; padding: 10px 22px;
     border-radius: 100px; font-size: 0.85rem; font-weight: 700;
@@ -340,12 +341,14 @@
 
   @media (max-width: 900px) {
     .nav-links { display: none; }
-    .mobile-agencies {
+    .mobile-nav-actions { display: flex; gap: 8px; align-items: center; }
+    .mobile-agencies, .mobile-careers {
       display: inline-flex; align-items: center; justify-content: center;
-      color: var(--blue-dark); font-weight: 700; font-size: 0.84rem;
-      padding: 8px 14px; border: 1.5px solid rgba(0,39,110,0.24);
+      color: var(--blue-dark); font-weight: 700; font-size: 0.82rem;
+      padding: 8px 12px; border: 1.5px solid rgba(0,39,110,0.24);
       border-radius: 100px;
     }
+    .mobile-careers { background: var(--blue-dark); color: white; border-color: var(--blue-dark); }
     .pillars, .team-grid, .team-grid-bottom { grid-template-columns: 1fr; }
     .team-grid-bottom { max-width: none; margin-top: 32px; }
     .strip .container { justify-content: flex-start; gap: 32px 48px; }
@@ -357,10 +360,82 @@
     nav .container { height: 64px; padding: 0 16px; gap: 10px; }
     .nav-brand { font-size: 0.98rem; }
     .nav-cta { display: none; }
-    .mobile-agencies { margin-left: auto; }
+    .mobile-nav-actions { margin-left: auto; }
+    .mobile-agencies, .mobile-careers { font-size: 0.78rem; padding: 7px 10px; }
     .agency-hero { padding: 120px 0 64px; }
     .agency-map-section { padding: 48px 0 72px; }
     .agency-map-frame { border-radius: 14px; }
     .agency-map-frame iframe { height: 500px; }
     .agency-seo-copy { padding: 26px 22px; margin-top: 48px; }
+  }
+
+
+  /* ---------- CAREERS SEO PAGE ---------- */
+  .career-hero {
+    background: linear-gradient(160deg, var(--blue-dark) 0%, var(--blue) 58%, #001c50 100%);
+    padding: 150px 0 92px;
+    color: white;
+  }
+  .career-eyebrow { color: var(--pink); }
+  .career-hero h1 {
+    font-family: var(--serif); font-weight: 600;
+    font-size: clamp(2.35rem, 5.5vw, 4.4rem);
+    line-height: 1.04; max-width: 850px;
+  }
+  .career-intro {
+    color: var(--blue-bright); max-width: 720px; margin-top: 24px;
+    font-size: 1.12rem; line-height: 1.7;
+  }
+  .career-hero-actions {
+    display: flex; gap: 16px; flex-wrap: wrap; margin-top: 34px;
+  }
+  .career-search-copy { background: #FBFAFC; padding-top: 96px; }
+  .career-path-grid {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+  .career-path-card {
+    background: white; border: 1px solid rgba(0,39,110,0.09);
+    border-radius: 20px; padding: 30px;
+    box-shadow: 0 10px 28px rgba(0,39,110,0.06);
+  }
+  .career-path-number {
+    font-family: var(--serif); color: var(--magenta);
+    font-size: 1rem; font-weight: 700; margin-bottom: 12px;
+  }
+  .career-path-card h2 {
+    font-family: var(--serif); color: var(--blue-dark);
+    font-size: 1.55rem; margin-bottom: 12px;
+  }
+  .career-path-card p {
+    color: var(--ink-soft); line-height: 1.65; margin-bottom: 16px;
+  }
+  .career-path-card .path-cta {
+    display: inline-block; margin-top: 22px;
+  }
+  .career-faq { margin-top: 96px; }
+  .career-faq-grid {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px;
+  }
+  .career-faq-grid article {
+    background: var(--blue-bright); border-radius: 18px; padding: 28px;
+  }
+  .career-faq-grid h3 {
+    font-family: var(--serif); color: var(--blue-dark);
+    font-size: 1.25rem; margin-bottom: 10px;
+  }
+  .career-faq-grid p {
+    color: var(--ink-soft); line-height: 1.65; font-size: 0.95rem;
+  }
+  .career-all-openings { margin-top: 36px; }
+
+  @media (max-width: 900px) {
+    .career-path-grid, .career-faq-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 640px) {
+    .career-hero { padding: 112px 0 64px; }
+    .career-search-copy { padding-top: 64px; }
+    .career-path-card { padding: 24px 20px; }
+    .career-faq { margin-top: 64px; }
   }

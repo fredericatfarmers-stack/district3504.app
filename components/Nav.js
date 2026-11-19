@@ -1,5 +1,3 @@
-import { careerPageUrl } from "../data/paths";
-
 export default function Nav() {
   return (
     <nav>
@@ -13,16 +11,16 @@ export default function Nav() {
           <a href="/#clarity">About Us</a>
           <a href="/agencies">Agencies</a>
         </div>
-        <a href="/agencies" className="mobile-agencies">
-          Agencies
-        </a>
-        <a
-          href={careerPageUrl}
-          target="_blank"
-          rel="noopener"
-          className="nav-cta"
-        >
-          Explore Openings
+        <div className="mobile-nav-actions">
+          <a href="/careers" className="mobile-careers">
+            Careers
+          </a>
+          <a href="/agencies" className="mobile-agencies">
+            Agencies
+          </a>
+        </div>
+        <a href="/careers" className="nav-cta">
+          Explore Careers
         </a>
       </div>
     </nav>

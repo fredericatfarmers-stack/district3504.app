@@ -1,4 +1,3 @@
-import { careerPageUrl } from "../data/paths";
 import Reveal from "./Reveal";
 
 export default function FinalCTA() {
@@ -7,17 +6,12 @@ export default function FinalCTA() {
       <div className="container">
         <Reveal as="h2">Ready to see what fits?</Reveal>
         <Reveal as="p">
-          Every path above leads to a real, current opening — no forms into
-          the void, no waiting to hear back.
+          Explore the current career and agency ownership paths available
+          through Farmers Insurance District 3504 in Dallas–Fort Worth.
         </Reveal>
         <Reveal className="final-actions">
-          <a
-            href={careerPageUrl}
-            target="_blank"
-            rel="noopener"
-            className="btn-primary"
-          >
-            Explore All Paths
+          <a href="/careers" className="btn-primary">
+            Explore All Career Paths
           </a>
         </Reveal>
       </div>
