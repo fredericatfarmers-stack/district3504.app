@@ -46,6 +46,7 @@
   .nav-brand span { color: var(--magenta); }
   .nav-links { display: flex; gap: 36px; align-items: center; }
   .nav-links a { font-size: 0.9rem; font-weight: 600; color: var(--blue-dark); }
+  .mobile-agencies { display: none; }
   .nav-cta {
     background: var(--blue-dark); color: white; padding: 10px 22px;
     border-radius: 100px; font-size: 0.85rem; font-weight: 700;
@@ -303,11 +304,63 @@
   }
   .empty-state h1 { font-family: var(--serif); color: var(--blue-dark); font-size: 2rem; margin-bottom: 16px; }
 
+  .agency-eyebrow { color: var(--pink); }
+  .agency-intro {
+    color: var(--blue-bright); max-width: 760px; margin-top: 20px;
+    font-size: 1.08rem; line-height: 1.7;
+  }
+  .agency-map-section { padding-top: 72px; }
+  .agency-map-frame {
+    overflow: hidden; border-radius: 20px;
+    border: 1px solid rgba(0,39,110,0.12);
+    box-shadow: 0 18px 50px rgba(0,39,110,0.12);
+    background: #f6f7fb;
+  }
+  .agency-map-frame iframe { display: block; border: 0; }
+  .agency-map-actions {
+    display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+    margin-top: 28px;
+  }
+  .agency-career-link {
+    color: var(--blue-dark); font-weight: 700; font-size: 0.95rem;
+  }
+  .agency-seo-copy {
+    margin-top: 72px; padding: 36px;
+    background: var(--blue-bright); border-radius: 20px;
+  }
+  .agency-seo-copy h2 {
+    font-family: var(--serif); color: var(--blue-dark);
+    font-size: clamp(1.5rem, 3vw, 2.1rem); line-height: 1.2;
+  }
+  .agency-seo-copy p {
+    color: var(--ink-soft); max-width: 850px; margin: 16px 0;
+    line-height: 1.7;
+  }
+  .agency-seo-copy a { color: var(--magenta); font-weight: 700; }
+
   @media (max-width: 900px) {
     .nav-links { display: none; }
+    .mobile-agencies {
+      display: inline-flex; align-items: center; justify-content: center;
+      color: var(--blue-dark); font-weight: 700; font-size: 0.84rem;
+      padding: 8px 14px; border: 1.5px solid rgba(0,39,110,0.24);
+      border-radius: 100px;
+    }
     .pillars, .team-grid, .team-grid-bottom { grid-template-columns: 1fr; }
     .team-grid-bottom { max-width: none; margin-top: 32px; }
     .strip .container { justify-content: flex-start; gap: 32px 48px; }
     .path-card { grid-template-columns: 44px 1fr; }
     .path-cta { grid-column: 2; margin-top: 12px; justify-self: start; }
+  }
+
+  @media (max-width: 640px) {
+    nav .container { height: 64px; padding: 0 16px; gap: 10px; }
+    .nav-brand { font-size: 0.98rem; }
+    .nav-cta { display: none; }
+    .mobile-agencies { margin-left: auto; }
+    .agency-hero { padding: 120px 0 64px; }
+    .agency-map-section { padding: 48px 0 72px; }
+    .agency-map-frame { border-radius: 14px; }
+    .agency-map-frame iframe { height: 500px; }
+    .agency-seo-copy { padding: 26px 22px; margin-top: 48px; }
   }
